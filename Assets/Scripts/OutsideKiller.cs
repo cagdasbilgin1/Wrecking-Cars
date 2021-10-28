@@ -8,8 +8,8 @@ public class OutsideKiller : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("game over");
-            Destroy(other.gameObject);
+            Debug.Log("game over");            
         }
+        Destroy(other.gameObject);
     }
 }
