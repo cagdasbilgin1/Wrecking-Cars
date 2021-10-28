@@ -6,6 +6,7 @@ public class PowerBoxHandler : MonoBehaviour
 {
     [SerializeField] GameObject ball;
     [SerializeField] float powerTime;
+    [SerializeField] LineRenderer lineRender;
     HingeJoint hinge;
     void Start()
     {
@@ -23,6 +24,7 @@ public class PowerBoxHandler : MonoBehaviour
 
     private void SpinBallAround()
     {
+        lineRender.enabled = false;
         hinge.useMotor = true;
         StartCoroutine(StopTwisterAfterSeconds(powerTime));
     }
@@ -31,5 +33,6 @@ public class PowerBoxHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         hinge.useMotor = false;
+        lineRender.enabled = true;
     }
 }
