@@ -6,10 +6,13 @@ public class PowerBoxHandler : MonoBehaviour
 {
     [SerializeField] GameObject ball;
     [SerializeField] float powerTime;
+    [SerializeField] LineRenderer lineRender;
     HingeJoint hinge;
+    TrailRenderer trail;
     void Start()
     {
         hinge = ball.GetComponent<HingeJoint>();
+        trail = ball.GetComponent<TrailRenderer>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,13 +26,35 @@ public class PowerBoxHandler : MonoBehaviour
 
     private void SpinBallAround()
     {
-        hinge.useMotor = true;
+        if (lineRender)
+        {
+            lineRender.enabled = false;
+        }
+        if (hinge)
+        {
+            hinge.useMotor = true;
+        }
+        if (trail)
+        {
+            trail.enabled = true;
+        }
         StartCoroutine(StopTwisterAfterSeconds(powerTime));
     }
 
     IEnumerator StopTwisterAfterSeconds(float time)
     {
         yield return new WaitForSeconds(time);
-        hinge.useMotor = false;
+        if (lineRender)
+        {
+            lineRender.enabled = true;
+        }
+        if (hinge)
+        {
+            hinge.useMotor = false;
+        }
+        if (trail)
+        {
+            trail.enabled = false;
+        }
     }
 }
