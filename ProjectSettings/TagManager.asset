@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TwisterBox
   - Ground
+  - SafeZone
   layers:
   - Default
   - TransparentFX
