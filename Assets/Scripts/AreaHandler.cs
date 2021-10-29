@@ -7,10 +7,10 @@ public class AreaHandler : MonoBehaviour
     [SerializeField] GameObject GreenCircle;
     List<int> targetPositions = new List<int>();
 
-    void Start()
+    void Awake()
     {
         AssignRandomOriginValuesToList();
-    }
+    }    
 
     void FixedUpdate()
     {
@@ -65,5 +65,10 @@ public class AreaHandler : MonoBehaviour
                 limit--;
             }
         }
+    }
+
+    public List<int> GetOriginValues()
+    {
+        return targetPositions;
     }
 }
