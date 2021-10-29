@@ -8,8 +8,8 @@ public class CarMover : MonoBehaviour
     [SerializeField] float moveSpeed = 15f;
     [SerializeField] float moveSpeedWhileTurning = 10f;
     [SerializeField] float turnSpeed = 300f;
-    [SerializeField] ParticleSystem leftWhellSmokeParticles;
-    [SerializeField] ParticleSystem rightWhellSmokeParticles;
+    [SerializeField] ParticleSystem leftWheelSmokeParticles;
+    [SerializeField] ParticleSystem rightWheelSmokeParticles;
 
     float currentMoveSpeed;
     float moverInput;
@@ -57,13 +57,13 @@ public class CarMover : MonoBehaviour
 
         if(turnerInput != 0)
         {
-            leftWhellSmokeParticles.Play();
-            rightWhellSmokeParticles.Play();
+            leftWheelSmokeParticles.Play();
+            rightWheelSmokeParticles.Play();
         }
         else
         {
-            leftWhellSmokeParticles.Stop();
-            rightWhellSmokeParticles.Stop();
+            leftWheelSmokeParticles.Stop();
+            rightWheelSmokeParticles.Stop();
         }
         
     }
