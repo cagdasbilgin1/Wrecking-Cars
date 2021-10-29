@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4019812988069041589}
   - component: {fileID: 1682760735107455800}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: WheelSmokeFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
