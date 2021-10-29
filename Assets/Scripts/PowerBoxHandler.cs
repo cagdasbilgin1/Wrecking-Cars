@@ -8,9 +8,11 @@ public class PowerBoxHandler : MonoBehaviour
     [SerializeField] float powerTime;
     [SerializeField] LineRenderer lineRender;
     HingeJoint hinge;
+    TrailRenderer trail;
     void Start()
     {
         hinge = ball.GetComponent<HingeJoint>();
+        trail = ball.GetComponent<TrailRenderer>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +28,7 @@ public class PowerBoxHandler : MonoBehaviour
     {
         lineRender.enabled = false;
         hinge.useMotor = true;
+        trail.enabled = true;
         StartCoroutine(StopTwisterAfterSeconds(powerTime));
     }
 
@@ -34,5 +37,6 @@ public class PowerBoxHandler : MonoBehaviour
         yield return new WaitForSeconds(time);
         hinge.useMotor = false;
         lineRender.enabled = true;
+        trail.enabled = false;
     }
 }
