@@ -26,17 +26,35 @@ public class PowerBoxHandler : MonoBehaviour
 
     private void SpinBallAround()
     {
-        lineRender.enabled = false;
-        hinge.useMotor = true;
-        trail.enabled = true;
+        if (lineRender)
+        {
+            lineRender.enabled = false;
+        }
+        if (hinge)
+        {
+            hinge.useMotor = true;
+        }
+        if (trail)
+        {
+            trail.enabled = true;
+        }
         StartCoroutine(StopTwisterAfterSeconds(powerTime));
     }
 
     IEnumerator StopTwisterAfterSeconds(float time)
     {
         yield return new WaitForSeconds(time);
-        hinge.useMotor = false;
-        lineRender.enabled = true;
-        trail.enabled = false;
+        if (lineRender)
+        {
+            lineRender.enabled = true;
+        }
+        if (hinge)
+        {
+            hinge.useMotor = false;
+        }
+        if (trail)
+        {
+            trail.enabled = false;
+        }
     }
 }
