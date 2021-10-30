@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class EnemyAI : MonoBehaviour
         if (other.gameObject.CompareTag("SafeZone"))
         {
             Destroy(navMesh);
+
         }
     }
 }

@@ -7448,6 +7448,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5710074043689493636, guid: a8e4411b0989e71419cdfc642b77dc13, type: 3}
   m_PrefabInstance: {fileID: 1068393354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068393361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068393355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15dd6e3ab053df47bfaed8ec1310cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1078005767
 GameObject:
   m_ObjectHideFlags: 0
@@ -16129,6 +16141,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d3b979ab6ce69dd42b4d7d3a67f03108, type: 3}
       propertyPath: m_Name
       value: EnemyCarAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d3b979ab6ce69dd42b4d7d3a67f03108, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d3b979ab6ce69dd42b4d7d3a67f03108, type: 3}
       propertyPath: m_RootOrder
